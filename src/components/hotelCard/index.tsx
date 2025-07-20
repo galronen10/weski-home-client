@@ -3,6 +3,7 @@ import { Hotel } from '../../types/hotel.interface';
 import './hotelCard.scss';
 import { RatingDisplay } from '../ratingDisplay';
 import { PinRightIcon } from '@radix-ui/react-icons';
+import { resortMap } from '../../types/resorts.interface';
 
 interface props {
   hotel: Hotel;
@@ -31,7 +32,7 @@ export const HotelCard: React.FC<props> = ({ hotel }) => {
 
         <div className="hotel-location">
           <PinRightIcon className="location-icon" />
-          <span>La Plagne</span>{' '}
+          <span>{resortMap.get(hotel.siteId)}</span>
         </div>
 
         <div className="separator-line"></div>
