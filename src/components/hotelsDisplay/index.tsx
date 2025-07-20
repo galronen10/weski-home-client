@@ -25,8 +25,8 @@ export const HotelsDisplay: React.FC = () => {
       </div>
 
       <div className="hotel-list-container">
-        {hotels.map((hotel) => (
-          <HotelCard key={hotel.id} hotel={hotel} />
+        {hotels.map((hotel, index) => (
+          <HotelCard key={index} hotel={hotel} />
         ))}
       </div>
     </div>

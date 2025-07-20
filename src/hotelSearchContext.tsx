@@ -24,9 +24,11 @@ export const HotelSearchProvider: React.FC<{ children: React.ReactNode }> = ({
     socketRef.current = socket;
 
     socket.on('hotel-result', (hotelsFromServer: Hotel[]) => {
-      setHotels((prev) =>
-        [...prev, ...hotelsFromServer].sort((a, b) => a.price - b.price),
-      );
+      setHotels((prev) => {
+        const newArray = [...prev, ...hotelsFromServer];
+        newArray.sort((a, b) => a.price - b.price);
+        return newArray;
+      });
     });
 
     return () => {
