@@ -13,7 +13,7 @@ import unusedImports from 'eslint-plugin-unused-imports';
 export default tseslint.config([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,.scss}'],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,

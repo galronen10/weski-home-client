@@ -1,0 +1,35 @@
+.cardContainer {
+  width: 900px;
+  height: 238px;
+  opacity: 1;
+  border-radius: 12px;
+  border-width: 1px;
+  background: #ffffff;
+  border: 1px solid #e0e3eb;
+  display: flex;
+  margin: 20px;
+}
+.image {
+  width: 380px;
+  height: 237px;
+  top: 0.83px;
+  opacity: 1;
+}
+
+.detailsContainer {
+  width: 480px;
+  height: 198px;
+  top: 20px;
+  left: 400px;
+  justify-content: space-between;
+  opacity: 1;
+}
+
+.name {
+  font-family: "Objektiv Mk2";
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 145%;
+letter-spacing: 0%;
+}
