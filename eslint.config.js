@@ -34,6 +34,7 @@ export default tseslint.config([
     },
      rules: {
       'unused-imports/no-unused-imports': 'error',
+      'react-refresh/only-export-components': 'off',
       'unused-imports/no-unused-vars': [
         'warn',
         {

@@ -1,5 +1,5 @@
-import React from "react";
-import "./search-button.scss";
+import React from 'react';
+import './search-button.scss';
 
 interface Props {
   onClick?: () => void;

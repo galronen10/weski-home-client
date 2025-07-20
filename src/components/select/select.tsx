@@ -1,7 +1,7 @@
-import React from "react";
-import * as SelectRaddix from "@radix-ui/react-select";
+import React from 'react';
+import * as SelectRaddix from '@radix-ui/react-select';
 
-import "./select.scss";
+import './select.scss';
 
 interface Props {
   onChange: (value: string) => void;
