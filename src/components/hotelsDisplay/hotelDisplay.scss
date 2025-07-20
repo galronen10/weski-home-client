@@ -1,0 +1,31 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header-section {
+  width: 100%;
+  max-width: 64rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.hotel-list-container {
+  width: 100%;
+  max-width: 64rem;
+}

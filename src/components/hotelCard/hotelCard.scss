@@ -1,35 +1,116 @@
-.cardContainer {
-  width: 900px;
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+   width: 900px;
   height: 238px;
   opacity: 1;
   border-radius: 12px;
   border-width: 1px;
   background: #ffffff;
   border: 1px solid #e0e3eb;
+  margin-bottom: 1.5rem;
+  font-family: Inter, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .hotel-card {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.hotel-card-image-section {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .hotel-card-image-section {
+    width: 40%;
+  }
+}
+
+.hotel-card-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .hotel-card-image {
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+}
+
+.hotel-card-details-section {
   display: flex;
-  margin: 20px;
-}
-.image {
-  width: 380px;
-  height: 237px;
-  top: 0.83px;
-  opacity: 1;
+  flex-direction: column;
+  padding: 1rem;
+  flex-grow: 1;
 }
 
-.detailsContainer {
-  width: 480px;
-  height: 198px;
-  top: 20px;
-  left: 400px;
-  justify-content: space-between;
-  opacity: 1;
+@media (min-width: 768px) {
+  .hotel-card-details-section {
+    padding: 1.5rem;
+  }
 }
 
-.name {
-  font-family: "Objektiv Mk2";
-font-weight: 500;
-font-style: Medium;
-font-size: 18px;
-line-height: 145%;
-letter-spacing: 0%;
+.hotel-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.hotel-location {
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.location-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+
+.separator-line {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hotel-price-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-top: auto;
+}
+
+.hotel-price {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hotel-price-per-person {
+  color: #4b5563;
+  margin-left: 0.5rem;
 }

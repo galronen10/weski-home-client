@@ -1,45 +1,44 @@
 import React from 'react';
 import { Hotel } from '../../types/hotel.interface';
-import { RatingDisplay } from '../ratingDisplay';
 import './hotelCard.scss';
+import { RatingDisplay } from '../ratingDisplay';
+import { PinRightIcon } from '@radix-ui/react-icons';
 
 interface props {
   hotel: Hotel;
 }
 export const HotelCard: React.FC<props> = ({ hotel }) => {
   return (
-    <div className="cardContainer">
-      <img
-        className="image"
-        src={hotel.imageUrl}
-        alt={hotel.name}
-        onError={(e) => {
-          e.currentTarget.onerror = null;
-          e.currentTarget.src = `https://placehold.co/600x400/E0E0E0/333333?text=${hotel.name}`;
-        }}
-      />
+    <div className="hotel-card">
+      <div className="hotel-card-image-section">
+        <img
+          src={hotel.imageUrl}
+          alt={hotel.name}
+          className="hotel-card-image"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = `https://placehold.co/600x400/E0E0E0/333333?text=${hotel.name}`;
+          }}
+        />
+      </div>
 
-      <div className="detailsContainer">
-        <div className="detailsData">
-          <h2 className="name">{hotel.name}</h2>
+      <div className="hotel-card-details-section">
+        <h2 className="hotel-name">{hotel.name}</h2>
 
-          <div className="flex items-center mb-2">
-            <RatingDisplay rating={hotel.rating} />
-          </div>
-
-          <div className="flex items-center text-gray-600 mb-4">
-            {/* <MapPinIcon className="h-5 w-5 text-gray-500 mr-2" />{' '} */}
-            <span>La Plagne</span>
-          </div>
+        <div className="hotel-rating">
+          <RatingDisplay rating={hotel.rating} />
         </div>
 
-        <div className="border-t border-gray-200 my-4 md:my-auto"></div>
+        <div className="hotel-location">
+          <PinRightIcon className="location-icon" />
+          <span>La Plagne</span>{' '}
+        </div>
 
-        <div className="flex justify-end items-baseline mt-auto">
-          <span className="text-3xl font-bold text-gray-900">
-            £{hotel.price.toLocaleString()}
-          </span>
-          <span className="text-gray-600 ml-2">/ per person</span>
+        <div className="separator-line"></div>
+
+        <div className="hotel-price-section">
+          <span className="hotel-price">£{hotel.price.toLocaleString()}</span>
+          <span className="hotel-price-per-person">/ per person</span>
         </div>
       </div>
     </div>
